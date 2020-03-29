@@ -1,0 +1,99 @@
+article#works.card.mx-auto.my-4(v-show="tab==='works'")
+    .card-body
+        p.card-text 一部非公開のものも含みますが、使える技術の紹介にもなるので掲載しています。
+
+    .card-body
+        h1.card-title Auto Diary
+        p.card-text
+            | 私たちの SNS が日記になるツール。
+            br
+            | Hack U 2019 OSAKA 出場作品です。
+            br
+            | ユーザーの Twitter へのツイートや Google カレンダーに登録したイベントから、その日の日記を自動で生成します。
+            br
+            | 私はバックエンドを担当し、Twitter や Google カレンダーのユーザー認証と、情報を取得する API を実装しました。
+            br
+            | サーバーサイドの言語は Python で、Web フレームワークの bottle を使いました。
+            br
+            | フロント側が未完成であり、現在のところ未公開です。
+
+    .card-body
+        h1.card-title ProEq
+        p.card-text
+            | 複雑な LaTeX の数式を Python 風のシンプルな文法から生成するツールです。
+            br
+            | 自分がLaTeX記法が苦手なので作りました。とても便利に使えています。
+            br
+            | まだ簡単なことしかできないので、もっと機能を追加してさらに便利にしていくつもりです。
+            br
+            | 使用言語は JavaScript (+ HTML/CSS) です。
+            br
+            | リアクティブに LaTeX 記法を生成するため、Vue.js を使っています。
+            br
+            | また、エディタ部分に CodeMirror、プレビュー部分に MathJax を使っています。
+            br
+            | 文法を自分で考えて、入力をトークンごとにパースして抽象構文木を生成し、それをもとに LaTeX 数式にトランスパイルしています。
+            br
+            | これを実現するために、自作コンパイラの作り方などを1から勉強しました。
+            br
+            | まだまだ開発途上ですが、GitHub Pages にて仮公開しています。
+            br
+            a(href="https://yatabis.github.io/ProEq/") ProEq | LaTeX数式生成ツール
+
+    .card-body
+        h1.card-title ガチャ確率計算ツール (仮名称)
+        p.card-text
+            | ソシャゲのガチャをターゲットとした、確率計算ツールです。自分用です。
+            br
+            | JavaScriptとVue.jsで作りました。まだ機能が少なくてUIが雑です。
+            br
+            | 最近お手入れされていませんが、そろそろこちらもアップデートしないといけないな、と思っています。
+            br
+            | 簡単な操作で知りたい確率がすぐにわかる最高なツールになる予定です。
+            br
+            | まだ他人に使ってもらうことは想定はしていませんが、自分が使うために GitHub Pages にて仮公開しています。
+            br
+            a(href="https://yatabis.github.io/fgo-summon-calculator/") FGO ガチャ確率計算
+
+
+    .card-body
+        h1.card-title Jehanne
+        p.card-text
+            | 自分用の身の回りいろいろ管理ツールです。
+            br
+            | 完全自分用なので、サービスとして他人に使っていただくことは想定していません。
+            br
+            | Go の Web フレームワーク Echo を使いました。また、Docker を使っています。
+            br
+            | LINE、Slack、Todoist、Google Calendar、DarkSky と連携しています。
+            br
+            | 主な機能としては、Todoist によるタスク管理と Google Calendar によるスケジュール管理を LINE のインターフェースから一元的に制御し、Slack の分報チャンネルに報告します。
+            br
+            | 私の中で最も大きなプロジェクトであり、鋭意アップデート中です。
+
+
+    .card-body
+        h1.card-title 一問一答bot
+        p.card-text
+            | 宅建の勉強をしていた時に、隙間時間を有効活用しようと思って LINE で勉強できる bot を作りました。自分＆家族用です。
+            br
+            | Python の bottle という Web フレームワークでサーバーを立てて、LINE の MessagingAPI とやりとりするようにしています。
+            br
+            | LINE の標準 UI だけでなく、リッチメニューや FlexMessage を効果的に取り入れた使いやすい UI になるようにこだわっています。
+            br
+            | 問題と解答・解説のセットは PostgresQL で管理しています。
+
+    .card-body
+        h1.card-title ギガ教えてくれる君
+        p.card-text
+            | スマホのデータ通信量の残量が減るたびに LINE で教えてくれるサービスです。自分＆家族用なので非公開です。
+            br
+            | 使用言語は Python です。
+            br
+            | データ残量の数値は MySoftbank のサイトから取得しています。
+            br
+            | ログインが必要なので、Celenium で Chrome を操作して、スクレイピングしたものを BeautifulSoup で処理しています。
+            br
+            | 10分ごとにサイトにアクセスしてデータ残量を取得し、一定以上減っていれば LINE に通知する、というシステムになっているので、多くの人に使っていただくには不適当な構成であると思い非公開としています。
+            br
+            | LINE への通知には MessagingAPI を利用しています。

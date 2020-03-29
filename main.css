@@ -1,0 +1,38 @@
+body {
+  background-color: #fcfeff;
+}
+
+header {
+  text-align: center;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #cfdae6;
+}
+
+nav {
+  max-width: 980px;
+  margin-bottom: -1px;
+}
+
+.nav-link {
+  margin-bottom: -1px;
+  border-radius: 3px !important;
+}
+
+.active {
+  background-color: #fcfeff !important;
+  border-width: 3px 1px 1px !important;
+  border-color: #ff193f #cfdae6 #fcfeff !important;
+}
+
+article {
+  max-width: 980px;
+  border: 1px solid #cfdae6;
+}
+
+footer {
+  text-align: center;
+  background-color: #082a4d;
+  color: #fafbfc;
+}
+
+/*# sourceMappingURL=main.css.map */
