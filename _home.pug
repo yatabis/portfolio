@@ -16,7 +16,7 @@ article#home.card.mx-auto.my-4(v-show="tab==='home'")
         table
             tr
                 td ・E-mail：
-                td 39yatabis.work@gmail.com
+                td: a(:href="'mailto: ' + email") {{ email }}
             tr
                 td ・Twitter：
                 td: a(href="https://twitter.com/yatabis_tg") @yatabis_tg
