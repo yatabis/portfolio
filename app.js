@@ -75,3 +75,11 @@ const change_tab = (tab) => {
   nav.tab = tab
   app.tab = tab
 }
+
+const test = () => {
+  fetch("https://atcoderratingsimulator.herokuapp.com?yatabis", {mode: "cors"})
+    .then(response => {
+      console.log(response)
+      console.log(response.json())
+    })
+}
