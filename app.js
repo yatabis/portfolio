@@ -1,3 +1,13 @@
+const Red = "FF3333"
+const Orange = "FF9933"
+const Yellow = "FFff33"
+const Blue = "3333FF"
+const Skyblue = "33FFFF"
+const Green = "33FF33"
+const Brown = "B36B24"
+const Gray = "B3B3B3"
+const Black = "333333"
+
 const nav = new Vue({
   el: "#nav",
   data: {
@@ -19,7 +29,10 @@ const app = new Vue({
       .then(json => {
         this.updated_at = json.updated_at.split("T")[0].replace(/-/g,".")
       })
-    fetch("https://atcoder.jp/users/yatabis/history/json")
+    fetch("https://atcoder.jp/users/yatabis/history/json", {
+      mode: "cors",
+      credentials: "include",
+    })
       .then(response => response.json())
       .then(json => {
         this.rating = parseInt(json[json.length - 1].NewRating)
@@ -27,7 +40,7 @@ const app = new Vue({
   },
   computed: {
     color: function () {
-      if (this.rating == " ") {
+      if (this.rating === " ") {
         return Black
       }
       if (this.rating >= 2800) {
@@ -62,13 +75,3 @@ const change_tab = (tab) => {
   nav.tab = tab
   app.tab = tab
 }
-
-const Red = "FF3333"
-const Orange = "FF9933"
-const Yellow = "FFff33"
-const Blue = "3333FF"
-const Skyblue = "33FFFF"
-const Green = "33FF33"
-const Brown = "B36B24"
-const Gray = "B3B3B3"
-const Black = "333333"
