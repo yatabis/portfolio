@@ -2,9 +2,11 @@ article#home.card.mx-auto.my-4(v-show="tab==='home'")
     .card-body
         h1.card-title 湯川 慎之介
         p
-            img.mx-1(alt="last update" :src="updated_at")
+            img.mx-1(:alt="'last update ' + updated_at" :src="updated_badge")
             img.mx-1(alt="lang=ja" src="https://img.shields.io/badge/lang-ja-brightgreen")
-            img.mx-1(alt="Twitter Follow" src="https://img.shields.io/twitter/follow/yatabis_tg?label=Follow&style=social")
+            img.mx-1(:alt="'AtCoder rating ' + rating" :src="rating_badge")
+            a(href="https://twitter.com/intent/follow?screen_name=yatabis_tg" target="_blank" rel="noopener noreferrer")
+                img.mx-1(alt="Twitter Follow" src="https://img.shields.io/twitter/follow/yatabis_tg?label=Follow&style=social")
 
         p.card-text
             | 京都大学 大学院 工学研究科 電子工学専攻 修士課程 2年
