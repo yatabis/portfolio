@@ -27,7 +27,7 @@ const app = new Vue({
     fetch("https://api.github.com/repos/yatabis/portfolio")
       .then(response => response.json())
       .then(json => {
-        this.updated_at = json.updated_at.split("T")[0].replace(/-/g,".")
+        this.updated_at = json.pushed_at.split("T")[0].replace(/-/g,".")
       })
     fetch("https://atcoder.jp/users/yatabis/history/json", {
       mode: "cors",
