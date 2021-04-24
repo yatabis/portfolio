@@ -24,15 +24,17 @@ article#works.card.mx-auto.my-4(v-show="tab==='works'")
             br
             | 自分がLaTeX記法が苦手なので作りました。とても便利に使えています。
             br
-            | まだ簡単なことしかできないので、もっと機能を追加してさらに便利にしていくつもりです。
+            | まだ簡単なことしかできないので、
+            del もっと機能を追加してさらに便利にしていくつもりです。
+            | LaTeX を使う機会がなくなったのでモチベーションがなくなっています。
             br
-            | 使用言語は JavaScript (+ HTML/CSS) です。
+            | 使用言語は HTML/CSS/JavaScript です。
             br
             | リアクティブに LaTeX 記法を生成するため、Vue.js を使っています。
             br
             | また、エディタ部分に CodeMirror、プレビュー部分に MathJax を使っています。
             br
-            | 文法を自分で考えて、入力をトークンごとにパースして抽象構文木を生成し、それをもとに LaTeX 数式にトランスパイルしています。
+            | 文法を自分で定義して、入力をトークンごとにパースして抽象構文木を生成し、それをもとに LaTeX 数式にトランスパイルしています。
             br
             | これを実現するために、自作コンパイラの作り方などを1から勉強しました。
             br
@@ -55,23 +57,6 @@ article#works.card.mx-auto.my-4(v-show="tab==='works'")
             br
             a(href="https://yatabis.github.io/fgo-summon-calculator/") FGO ガチャ確率計算
 
-
-    .card-body
-        h1.card-title Jehanne
-        p.card-text
-            | 自分用の身の回りいろいろ管理ツールです。
-            br
-            | 完全自分用なので、サービスとして他人に使っていただくことは想定していません。
-            br
-            | Go の Web フレームワーク Echo を使いました。また、Docker を使っています。
-            br
-            | LINE、Slack、Todoist、Google Calendar、DarkSky と連携しています。
-            br
-            | 主な機能としては、Todoist によるタスク管理と Google Calendar によるスケジュール管理を LINE のインターフェースから一元的に制御し、Slack の分報チャンネルに報告します。
-            br
-            | 私の中で最も大きなプロジェクトであり、鋭意アップデート中です。
-
-
     .card-body
         h1.card-title 一問一答bot
         p.card-text
@@ -82,6 +67,12 @@ article#works.card.mx-auto.my-4(v-show="tab==='works'")
             | LINE の標準 UI だけでなく、リッチメニューや FlexMessage を効果的に取り入れた使いやすい UI になるようにこだわっています。
             br
             | 問題と解答・解説のセットは PostgresQL で管理しています。
+            br
+            | サーバー言語を Go でリプレイスしました。これによりパフォーマンスが若干向上しました。
+            br
+            | また、問題の管理を PostgresQL から Google スプレッドシートに移行しました。これにより、問題管理作業が非エンジニアにとっても容易なものとなりました。
+            br
+            | Go からスプレッドシートAPI を操作するいい練習台になりました。
 
     .card-body
         h1.card-title ギガ教えてくれる君
